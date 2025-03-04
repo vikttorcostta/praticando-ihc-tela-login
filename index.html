@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/styles/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script src="src/js/javascript.js"></script>
+
+</head>
+<body>
+  <div class="flex flex-row h-screen">
+    <div class="hidden md:block w-full bg-left bg-cover bg-[url(https://sentriweb.com.br/wp-content/uploads/2025/03/bg-login-ok.jpg)]"></div>
+    <div class="bg-white w-[800px] flex flex-col justify-center items-center p-4">
+      <div class="flex flex-col items-center">
+        <form action="" method="post" onsubmit="return validar_senha()">
+          <div class="flex flex-col gap-4 items-center justify-center">
+            <img src="https://sentriweb.com.br/wp-content/uploads/2025/03/SENAI_logo_2024-copia.png" alt="logo do SENAI">
+            
+            <div class="flex flex-col items-start gap-2">
+              <label for="email">E-mail</label>
+              <input id="email" class="w-96 p-2 rounded-lg outline-blue-500 border-2 bg-blue-100 border-solid border-gray-300" type="email" name="email" id="email" oninput="validar_email()">
+              <div id="email-mensagem" class="hidden text-sm">
+                  <p id="texto-email"></p>
+              </div>
+                
+                <label for="password">Senha</label>
+                <div class="relative w-96">
+                    <input class="w-full p-2 rounded-lg outline-blue-500 border-2 bg-blue-100 border-solid border-gray-300 pr-10" 
+                        type="password" name="password" id="password" oninput="validar_senha_digitar()">
+                    <button type="button" onclick="mostrar_senha()" class="absolute inset-y-0 right-0 flex items-center px-3">
+                        <span id="eye-icon">
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                    </button>
+                </div>
+                <div id="senha-mensagens" class="text-red-500 text-sm hidden">
+                    <p id="msg-tamanho"></p>
+                    <p id="msg-caixaalta"></p>
+                    <p id="msg-numero"></p>
+                    <p id="msg-especial"></p>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-4">
+              <button class="cursor-pointer w-96 bg-blue-600 rounded-md p-2 text-white font-medium">Entrar</button>
+              <a class="font-medium hover:text-blue-600" href="">Esqueceu a senha?</a>
+            </div>
+          
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
+</body>
+</html>
