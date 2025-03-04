@@ -13,7 +13,7 @@ function mostrar_senha(){
 
 function validar_senha() {
     const senha = document.getElementById("password").value;
-    const email = document.getElementById("email");
+    const email = document.getElementById("email").value;
     const mensagens = document.getElementById("senha-mensagens");
     const texto_email = document.getElementById("email-mensagem");
 
